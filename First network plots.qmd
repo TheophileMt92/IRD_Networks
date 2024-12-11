@@ -152,7 +152,7 @@ plot(g,
      main = "Related Pairs Network (First/Second Degree Only; First 100 rows)")
 
 # Add legend
-legend(1.2, 0.5,  # Position on the right
+legend(1.2, 0,  # Position on the right
        legend = c("First degree", "Second degree"),
        col = c("red", "blue"), 
        lwd = c(1, 0.2),
@@ -244,7 +244,7 @@ plot(g,
      main = "Related Pairs Network")
 
 # Add relationship legend
-legend(1.2, 0.8,  # Position on the right
+legend(1.2, 0.6,  # Position on the right
        title = "Relationship type",
        legend = c("First degree", "Second degree"),
        col = c("red", "blue"), 
@@ -266,6 +266,7 @@ legend_sizes <- scale_size(legend_degrees) * 0.5
 legend(1.2, 0.05,
        title = "Number of connections",
        legend = " ",
+       cex = 0.6,
        bty = "n")
 
 # Add node size legend with regular intervals
@@ -276,9 +277,9 @@ legend(1.2, 0.0,
        pt.bg = adjustcolor("lightblue", alpha.f = 0.7),
        pt.lwd = 1,
        col = "darkblue",
-       cex = 0.7,
+       cex = 0.6,
        bty = "n",
-       x.intersp = 1.6,  # Increased from 0.5
+       x.intersp = 1.8,  # Increased from 0.5
        y.intersp = 2.4,
        title.adj = 0.15)
 
@@ -377,7 +378,7 @@ legend_sizes <- 2 + (legend_degrees - min(node_degrees)) / (max(node_degrees) - 
 # Add node size legend
 # Add title legend
 legend(1.2, 0.05,
-       title = "Number of Connections",
+       title = "Number of connections",
        legend = " ",  # Changed from NULL to a single space
        cex = 0.6,     # Match the text size with the items below
        bty = "n")
@@ -496,7 +497,7 @@ legend(1.2, 0.8,  # Adjust these values to position the legend
 
 # Country legend
 legend(1.2, 0.4,  # Adjust these values to position the legend
-       title = "Country of Origin",
+       title = "Country of origin",
        legend = unique_countries,
        col = country_colors,
        pch = 19,
@@ -513,7 +514,7 @@ legend_sizes <- 2 + (legend_degrees - min(node_degrees)) / (max(node_degrees) - 
 
 # Add title legend
 legend(1.2, -0.25,
-       title = "Number of Connections",
+       title = "Number of connections",
        legend = " ",  # Changed from NULL to a single space
        cex = 0.6,     # Match the text size with the items below
        bty = "n")
@@ -659,7 +660,7 @@ legend_sizes <- 2 + (legend_degrees - min(node_degrees)) / (max(node_degrees) - 
 # Add node size legend
 # Add title legend
 legend(1.2, -0.25,
-       title = "Number of Connections",
+       title = "Number of connections",
        legend = " ",  # Changed from NULL to a single space
        cex = 0.6,     # Match the text size with the items below
        bty = "n")
